@@ -1,5 +1,5 @@
 <?php 
-// $names = ["Joe", "Elmer", "eddie"];
+$names = ["Joe", "Elmer", "eddie"];
 
 // if(isset($names[0])) {
 //   echo $names[0];
@@ -7,14 +7,29 @@
 //   echo 'Name does not exist';
 // }
 
-/* Associative Array */
+// foreach Loop
+foreach($names as $name) {
+  echo "<h1>$name</h1>";
+}
 
-$person = Array(
+
+// for Loop
+for($i=0; $i<count($names); $i++) {
+  echo "<ul><li>$names[$i]</li></ul>";
+}
+
+
+
+/* Associative Array with loops*/
+
+$person = [
   'first_name' => 'Joeb',
   'last_name' => 'Balingit',
   'address' => 'Rizal'
-);
+];
 
-echo $person['first_name'] . " " .  $person['last_name'] . " is living in " . $person['address'];
+foreach($person as $key => $person_info) {
+  echo "<p>$key: $person_info</p>";
+}
 
 ?>
